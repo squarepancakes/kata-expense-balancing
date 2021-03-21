@@ -1,33 +1,93 @@
-### SUPERMARKET
+# Expenses Accounts Balancing
 
-## DESCRIPTION
+This is my solution to the code assignment for Expenses Accounts Balancing
 
-An implementation of the Checkout problem/kata in JS.
+## Assumptions
 
-## INSTALLATION
+1. The input data format is not fixed and the input structure can be designed as required by the solution.
+2. Other scenarios and edge cases that might encountered in this problem can be added on.
 
-Clone this repositiory and run `npm install`
+## Question
 
-## PROBLEM DEFINITION
+You and a few friends are going on a holiday to Melbourne. For convenience sake, each friend takes turns to pay for expenses incurred, e.g. one friend pays for a group brunch at Top Paddock Cafe, and another pays for a car rental.
 
-For an online store:
+At the end of the trip, how would you determine how much each person has to pay so that the accounts are balanced in the least number of transactions?
 
-**Code Name Price**
+## Example scenario 1:
 
-- 001 Travel Card Holder $9
-- 002 Personalised cufflinks $45
-- 003 Kids T-shirt $19
+Alice paid $60 for lunch at Top Paddock Cafe
+Bob paid $120 for car rental.
+Charlie paid $30 for some snacks they shared.
 
-Our marketing team want to offer promotions as an incentive for our customers to purchase these items.
+Example output 1:
+Alice pays Bob $10.
+Charlie pays Bob $40.
+Number of transactions: 2
 
-If you spend over $60, then you get 10% off your purchase If you buy 2 or more travel card holders then the price drops to $8.50.
+## Example scenario 2:
 
-Our check-out can scan items in any order, and because our promotions will change, it needs to be flexible regarding our promotional rules.
+Ali paid $10.
+Zack paid $30.
 
-Implement a checkout system that fulfills these requirements.
+Example output 2:
+Ali pays Zack $10.
+Number of transactions: 1
 
-**Test data**
+The input data format is not fixed and you are free to design the input structure as required by your code. Feel free to add on other scenarios and edge cases you might encounter in this problem.
 
-- Basket: 001,002,003 Total price expected: $71.10
-- Basket: 001,003,001 Total price expected: $36
-- Basket: 001,002,001,003 Total price expected: $81
+## Running the application
+
+1. Unzip the code to a folder on your computer
+2. You would need node.js installed on your computer to run this application. You can download it from https://nodejs.org/en/
+3. You would need to change the file path in `src/index.js` for `tests/testData/testInput.txt` to the file path on your computer
+4. To run the program for the Expenses Accounts Balance, go to the project's folder in your command line and run the command below
+
+```
+npm run start
+```
+
+## Run unit tests and linter
+
+Before running any scripts, please install development dependencies:
+
+```
+npm install
+```
+
+You can now run the following scripts:
+
+Run linter
+
+```
+npm run lint
+```
+
+Run unit tests
+
+```
+npm test
+```
+
+Run unit tests in watch mode
+
+```
+npm run test:watch
+```
+
+Run both linter and unit tests
+
+```
+npm run test:all
+```
+
+Run test coverage
+
+```
+npm run test:coverage
+```
+
+Open coverage report
+
+```
+npm run test:report
+```
